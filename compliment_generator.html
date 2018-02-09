@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Random Compliment Generator</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link href="vendor/bootstrap/">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  </head>
+  <body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class = "container-fluid">
+    <div class = "row">
+      <h1>Novia:</h1>
+    </div>
+    <br>
+    <div class = "row">
+      <h2 id = "complement_text">Hey there good lookin!</h2>
+    </div>
+    <div class = "row center-block" id = "button">
+      <button type="button" class="btn btn-primary btn-lg center-block" id = "complement_button" onclick="complement_generator()" >Click to Receive Compliment</button>
+    </div>
+  </div>  
+  </body>
+  <script>
+    function complement_generator() {
+      var complement_list = ["You are the most beautiful person that I know.",
+                          "\"But I can't help falling in love with you\"",
+                          "Holy hell you're attractive!!!",
+                          "Are your parents models?",
+                          "You are the most wonderful person alive.",
+                          "You make my world go round",
+                          "You are so friendly :)",
+                          "Wow you're cute AND nice??",
+                          "I know there's an afterlife because there's an angel reading this",
+                          "You're awesome!!",
+                          "You have a smile that lights up an entire village"]
+      var complement_index = Math.ceil(10 * (Math.random()))
+      var temp = complement_list[complement_index]
+      document.getElementById("complement_text").innerHTML = complement_list[complement_index];
+    };
+  </script>
+  
+</html
